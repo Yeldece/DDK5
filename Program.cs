@@ -7,12 +7,22 @@ namespace Console_review
         {
             Console.WriteLine("Sayi giriniz");
             int sayi = Convert.ToInt32(Console.ReadLine());
-            int toplam = 0;
-            for (int i = 0; i <= sayi; i++)
+            string filler = "*";
+            for (int i = 1; i <= sayi; i ++)
             {
-                if (i % 2 == 0) toplam += i;
+                Console.Write("*");
+                if (i == 1 || i == sayi)
+                {
+                    filler = "*";
+                }
+                else
+                {
+                    filler = " ";
+                }
+                for (int j = 2; j < sayi; j++) { Console.Write(filler); }
+                Console.Write("*");
+                Console.WriteLine();
             }
-            Console.WriteLine("sonuc " + toplam.ToString());
             Console.ReadKey();
 
         }
