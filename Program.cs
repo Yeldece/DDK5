@@ -5,12 +5,12 @@ namespace Console_review
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hangi sayiya kadar toplanacak? ");
+            Console.WriteLine("Sayi giriniz");
             int sayi = Convert.ToInt32(Console.ReadLine());
             int toplam = 0;
             for (int i = 0; i <= sayi; i++)
             {
-                toplam += i;
+                if (i % 2 == 0) toplam += i;
             }
             Console.WriteLine("sonuc " + toplam.ToString());
             Console.ReadKey();
