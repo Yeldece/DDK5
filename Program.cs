@@ -148,9 +148,17 @@ namespace Console_review
             price *= 1.18;
             Console.WriteLine(price.ToString());
         }
+        static void sorArray()
+        {
+            int[] array = { 5, 2, 3, 4, 1 };
+            foreach (int i in array)
+            {
+                Console.WriteLine(i.ToString());
+            }
+        }
         static void Main(string[] args)
         {
-            soru10();
+            sorArray();
             Console.ReadKey();
 
         }
