@@ -3,7 +3,7 @@ namespace Console_review
 {
     class Program
     {
-        static void yildizcizme()
+        static void soru6()
         {
             Console.WriteLine("Sayi giriniz");
             int sayi = Convert.ToInt32(Console.ReadLine());
@@ -88,7 +88,7 @@ namespace Console_review
             }
             Console.WriteLine();
         }
-                static void soru5()
+        static void soru5()
         {
             List<int> canDivide = new List<int>();
             for (int i = 0; i <= 100; i++)
@@ -97,10 +97,28 @@ namespace Console_review
             }
             Console.WriteLine(canDivide.Count.ToString());
         }
+        static void soru7()
+        {
+            int sayi=Convert.ToInt32(Console.ReadLine());
+            for (int i = 1, j = 1; i <= sayi;)
+            {
+                if (j <= sayi)
+                {
+                    Console.Write("*");
+                }
+                else if (j > sayi)
+                {
+                    i++;
+                    j = 1;
+                    Console.WriteLine();
+                }
+            }
 
+            Console.WriteLine();
+        }
         static void Main(string[] args)
         {
-            soru5();
+            soru7();
             Console.ReadKey();
 
         }
