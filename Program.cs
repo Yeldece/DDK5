@@ -168,20 +168,66 @@ namespace Console_review
         }
         static void soru11()
         {
-for(int i=1;i<=5;i++){
-    for(int j=i;j>=1;j--){
-        if(j==1){
-Console.Write(j.ToString());
-        } else{
-            Console.Write(j.ToString()+" ");
+            for (int i = 1; i <= 5; i++)
+            {
+                for (int j = i; j >= 1; j--)
+                {
+                    if (j == 1)
+                    {
+                        Console.Write(j.ToString());
+                    }
+                    else
+                    {
+                        Console.Write(j.ToString() + " ");
+                    }
+                }
+                Console.WriteLine();
+            }
         }
+        static void soru12()
+        {
+            int n1 = Convert.ToInt32(Console.ReadLine());
+            int n2 = Convert.ToInt32(Console.ReadLine());
+            int n3 = Convert.ToInt32(Console.ReadLine());
+            if (n1 < n2 && n1 < n3)
+            {
+                Console.WriteLine("En kucuk sayi: " + n1.ToString());
+            }
+            else if (n2 < n1 && n2 < n3)
+            {
+                Console.WriteLine("en kucuk sayi " + n2.ToString());
+            }
+            else
+            {
+                Console.WriteLine("En kucuk sayi: " + n3.ToString());
+            }
+
+        }
+        static void randomGuessGame()
+        {
+            Random rand = new Random();
+            int goal = rand.Next(1, 101);
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine("tahmin giriniz, " + i.ToString() + "hakkiniz kaldi.");
+                int guess = Convert.ToInt32(Console.ReadLine());
+
+            }
+        }
+        static void findSmallestInAnArray()
+        {
+int[] array={73,12,81,2,25,91,9,32};
+int smallest=array[0];
+for(int i=0;i<array.Length;i++){
+    if(smallest> array[i]){
+        smallest=array[i];
     }
-        Console.WriteLine();
 }
+    Console.WriteLine("EN kucuk sayi: "+ smallest.ToString());
         }
         static void Main(string[] args)
         {
-            soru11();
+            findSmallestInAnArray();
             Console.ReadKey();
         }
     }
