@@ -345,7 +345,7 @@ namespace Console_review
         {
             Console.WriteLine("Ucgenin tabani olacak sayiyi giriniz: ");
             int taban = Convert.ToInt32(Console.ReadLine());
-            int width=taban*2;
+            int width = taban * 2;
             for (int line = 0; line < taban; line++)
             {
 
