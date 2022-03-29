@@ -88,9 +88,19 @@ namespace Console_review
             }
             Console.WriteLine();
         }
+                static void soru5()
+        {
+            List<int> canDivide = new List<int>();
+            for (int i = 0; i <= 100; i++)
+            {
+                if (i % 2 == 0 && i % 3 == 0) canDivide.Add(i);
+            }
+            Console.WriteLine(canDivide.Count.ToString());
+        }
+
         static void Main(string[] args)
         {
-            soru4();
+            soru5();
             Console.ReadKey();
 
         }
