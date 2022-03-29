@@ -216,19 +216,54 @@ namespace Console_review
         }
         static void findSmallestInAnArray()
         {
-int[] array={73,12,81,2,25,91,9,32};
-int smallest=array[0];
-for(int i=0;i<array.Length;i++){
-    if(smallest> array[i]){
-        smallest=array[i];
-    }
-}
-    Console.WriteLine("EN kucuk sayi: "+ smallest.ToString());
+            int[] array = { 73, 12, 81, 2, 25, 91, 9, 32 };
+            int smallest = array[0];
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (smallest > array[i])
+                {
+                    smallest = array[i];
+                }
+            }
+            Console.WriteLine("EN kucuk sayi: " + smallest.ToString());
+        }
+        static void loto()
+        {
+            int[] lotodizi = new int[6];
+            Random rand = new Random();
+            for (int i = 0; i < 6; i++)
+            {
+                int num = rand.Next(1, 50);
+                for (int j = 0; j < lotodizi.Length; j++)
+                {
+                    if (lotodizi[j] == num)
+                    {
+                        i--;
+                        break;
+                    }
+                }
+                lotodizi[i] = num;
+            }
+            foreach (int i in lotodizi)
+            {
+                Console.Write(i.ToString() + ", ");
+            }
+        }
+        static void soru17()
+        {
+            int[] array = { 98, -8, 12, -83, 23 };
+            foreach (int i in array)
+            {
+                if (i > 0)
+                {
+Console.Write(i.ToString());
+                }
+            }
+Console.WriteLine();
         }
         static void Main(string[] args)
         {
-            findSmallestInAnArray();
-            Console.ReadKey();
+            loto(); Console.ReadKey();
         }
     }
 }
