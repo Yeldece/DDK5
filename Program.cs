@@ -156,8 +156,32 @@ namespace Console_review
                 Console.WriteLine(i.ToString());
             }
         }
+        static void soru13()
+        {
+            int[] array = { 22, 41, 13, 52, 73 };
+            int total = 0;
+            foreach (int i in array)
+            {
+                total += i;
+            }
+            Console.WriteLine(total.ToString());
+        }
+        static void soru11()
+        {
+for(int i=1;i<=5;i++){
+    for(int j=i;j>=1;j--){
+        if(j==1){
+Console.Write(j.ToString());
+        } else{
+            Console.Write(j.ToString()+" ");
+        }
+    }
+        Console.WriteLine();
+}
+        }
         static void Main(string[] args)
         {
+            soru11();
             Console.ReadKey();
         }
     }
