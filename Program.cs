@@ -128,9 +128,19 @@ namespace Console_review
             }
             Console.WriteLine(total.ToString());
         }
+        static void soru9()
+        {
+            int sayi = Convert.ToInt32(Console.ReadLine());
+            int toplam = 0;
+            for (int i = 1; i <= sayi; i++)
+            {
+                toplam += i * i;
+            }
+Console.WriteLine(toplam.ToString());
+        }
         static void Main(string[] args)
         {
-            soru8();
+            soru9();
             Console.ReadKey();
 
         }
