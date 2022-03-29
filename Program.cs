@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 namespace Console_review
 {
     class Program
     {
+        #region soru6
         static void soru6()
         {
             Console.WriteLine("Sayi giriniz");
@@ -23,11 +24,14 @@ namespace Console_review
                 Console.Write("*");
                 Console.WriteLine();
             }
-
         }
+        #endregion
+        #region soru1
         static void soru1()
         {
+            Console.WriteLine("Sayi giriniz");
             int sayi1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Sayi giriniz");
             int sayi2 = Convert.ToInt32(Console.ReadLine());
             if (sayi1 == sayi2)
             {
@@ -48,8 +52,11 @@ namespace Console_review
             }
             Console.WriteLine(topllam.ToString());
         }
+        #endregion
+        #region soru2
         static void soru2()
         {
+            Console.WriteLine("Sayi giriniz: ");
             int sayi = Convert.ToInt32(Console.ReadLine());
             if (sayi <= 0)
             {
@@ -60,6 +67,8 @@ namespace Console_review
                 Console.WriteLine(sayi.ToString());
             }
         }
+        #endregion
+        #region soru3
         static void soru3()
         {
             int[] sayilar = new int[3];
@@ -75,6 +84,8 @@ namespace Console_review
             }
             Console.WriteLine("Sonuc: " + adet.ToString());
         }
+        #endregion
+        #region  soru4
         static void soru4()
         {
             List<int> canDivide = new List<int>();
@@ -88,6 +99,8 @@ namespace Console_review
             }
             Console.WriteLine();
         }
+        #endregion
+        #region  soru5
         static void soru5()
         {
             List<int> canDivide = new List<int>();
@@ -97,7 +110,9 @@ namespace Console_review
             }
             Console.WriteLine(canDivide.Count.ToString());
         }
-        static void soru7()
+        #endregion
+        #region  soru6Version2
+        static void soru6v2()
         {
             int sayi = Convert.ToInt32(Console.ReadLine());
             for (int i = 1, j = 1; i <= sayi; j++)
@@ -113,12 +128,13 @@ namespace Console_review
                     Console.WriteLine();
                 }
             }
-
             Console.WriteLine();
         }
-        static void soru8()
+        #endregion
+        #region  soru7
+        static void soru7()
         {
-            Console.WriteLine("Carpilacak iki sayiyi giriniz");
+            Console.WriteLine("Carpilacak iki sayiyi sirayla giriniz");
             int sayi1 = Convert.ToInt32(Console.ReadLine());
             int sayi2 = Convert.ToInt32(Console.ReadLine());
             int total = 0;
@@ -128,8 +144,24 @@ namespace Console_review
             }
             Console.WriteLine(total.ToString());
         }
+        #endregion
+        #region  soru8
+        static void soru8()
+        {
+            Console.WriteLine("3 adet sayi gireceksiniz: ");
+            int sayi1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ikinci sayiyi giriniz");
+            int sayi2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ucuncu sayiyi giriniz");
+            int sayi3 = Convert.ToInt32(Console.ReadLine());
+            double average = (sayi1 + sayi2 + sayi3) / 3;
+            Console.WriteLine(average.ToString());
+        }
+        #endregion
+        #region soru9 
         static void soru9()
         {
+            Console.WriteLine("Sayi giriniz: ");
             int sayi = Convert.ToInt32(Console.ReadLine());
             int toplam = 0;
             for (int i = 1; i <= sayi; i++)
@@ -138,6 +170,8 @@ namespace Console_review
             }
             Console.WriteLine(toplam.ToString());
         }
+        #endregion
+        #region  soru10
         static void soru10()
         {
             double price = Convert.ToDouble(Console.ReadLine());
@@ -148,6 +182,8 @@ namespace Console_review
             price *= 1.18;
             Console.WriteLine(price.ToString());
         }
+        #endregion
+        #region  printAnArray
         static void sorArray()
         {
             int[] array = { 5, 2, 3, 4, 1 };
@@ -156,6 +192,8 @@ namespace Console_review
                 Console.WriteLine(i.ToString());
             }
         }
+        #endregion
+        #region  soru13
         static void soru13()
         {
             int[] array = { 22, 41, 13, 52, 73 };
@@ -166,6 +204,8 @@ namespace Console_review
             }
             Console.WriteLine(total.ToString());
         }
+        #endregion
+        #region  soru11
         static void soru11()
         {
             for (int i = 1; i <= 5; i++)
@@ -184,6 +224,8 @@ namespace Console_review
                 Console.WriteLine();
             }
         }
+        #endregion
+        #region  soru12
         static void soru12()
         {
             int n1 = Convert.ToInt32(Console.ReadLine());
@@ -201,32 +243,51 @@ namespace Console_review
             {
                 Console.WriteLine("En kucuk sayi: " + n3.ToString());
             }
-
         }
+        #endregion
+        #region  GuessGame
         static void randomGuessGame()
         {
             Random rand = new Random();
             int goal = rand.Next(1, 101);
-            for (int i = 1; i <= 10; i++)
+            for (int i = 10; i >= 1; i--)
             {
-                Console.WriteLine("tahmin giriniz, " + i.ToString() + "hakkiniz kaldi.");
+                Console.WriteLine("Enter your guess, " + i.ToString() + "try you have left");
                 int guess = Convert.ToInt32(Console.ReadLine());
-
+                if (guess == goal)
+                {
+                    Console.WriteLine("Correct, You Won!");
+                    break;
+                }
+                else if (guess > goal)
+                {
+                    Console.WriteLine("Lower");
+                }
+                else
+                {
+                    Console.WriteLine("Above");
+                }
             }
         }
-        static void findSmallestInAnArray()
+        #endregion
+        #region  soru15-16
+        static void soru15()
         {
             int[] array = { 73, 12, 81, 2, 25, 91, 9, 32 };
             int smallest = array[0];
+            int index = 0;
             for (int i = 0; i < array.Length; i++)
             {
                 if (smallest > array[i])
                 {
                     smallest = array[i];
+                    index = i;
                 }
             }
-            Console.WriteLine("EN kucuk sayi: " + smallest.ToString());
+            Console.WriteLine("EN kucuk sayi: " + smallest.ToString() + " Indexi: " + index.ToString());
         }
+        #endregion
+        #region  loto
         static void loto()
         {
             int[] lotodizi = new int[6];
@@ -249,6 +310,8 @@ namespace Console_review
                 Console.Write(i.ToString() + ", ");
             }
         }
+        #endregion
+        #region  soru17
         static void soru17()
         {
             int[] array = { 98, -8, 12, -83, 23 };
@@ -256,14 +319,42 @@ namespace Console_review
             {
                 if (i > 0)
                 {
-Console.Write(i.ToString());
+                    Console.Write(i.ToString());
                 }
             }
-Console.WriteLine();
+            Console.WriteLine();
         }
+        #endregion
+        #region  soru18
+        static void soru18()
+        {
+            int[] array = { 102, 842, 12, 32, 41, 52, 33, 63, 8, 72, 11 };
+            int biggest = array[0];
+            foreach (int i in array)
+            {
+                if (biggest < i)
+                {
+                    biggest = i;
+                }
+            }
+            Console.WriteLine("Biggest: " + biggest.ToString());
+        }
+        #endregion
+        #region  soru19
+        static void soru19()
+        {
+            Console.WriteLine("Ucgenin tabani olacak sayiyi giriniz: ");
+            int taban = Convert.ToInt32(Console.ReadLine());
+            int width=taban*2;
+            for (int line = 0; line < taban; line++)
+            {
+
+            }
+        }
+        #endregion
         static void Main(string[] args)
         {
-            loto(); Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }

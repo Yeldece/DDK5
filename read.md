@@ -1,0 +1,1 @@
+https://github.com/yakintech/csharp-tutorial/blob/master/HelloCSharp/Sorular.md

@@ -8,19 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\z004j87c\\.nuget\\packages\\": {}
+    "C:\\Users\\jay06\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\z004j87c\\Desktop\\Console review\\Console review.csproj",
+      "projectUniqueName": "C:\\Users\\jay06\\Documents\\GitHub\\Console-review\\Console review.csproj",
       "projectName": "Console review",
-      "projectPath": "C:\\Users\\z004j87c\\Desktop\\Console review\\Console review.csproj",
-      "packagesPath": "C:\\Users\\z004j87c\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\z004j87c\\Desktop\\Console review\\obj\\",
+      "projectPath": "C:\\Users\\jay06\\Documents\\GitHub\\Console-review\\Console review.csproj",
+      "packagesPath": "C:\\Users\\jay06\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jay06\\Documents\\GitHub\\Console-review\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\z004j87c\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jay06\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
