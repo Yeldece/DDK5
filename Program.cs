@@ -99,8 +99,8 @@ namespace Console_review
         }
         static void soru7()
         {
-            int sayi=Convert.ToInt32(Console.ReadLine());
-            for (int i = 1, j = 1; i <= sayi;)
+            int sayi = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1, j = 1; i <= sayi; j++)
             {
                 if (j <= sayi)
                 {
@@ -116,9 +116,21 @@ namespace Console_review
 
             Console.WriteLine();
         }
+        static void soru8()
+        {
+            Console.WriteLine("Carpilacak iki sayiyi giriniz");
+            int sayi1 = Convert.ToInt32(Console.ReadLine());
+            int sayi2 = Convert.ToInt32(Console.ReadLine());
+            int total = 0;
+            for (int i = 1; i <= sayi2; i++)
+            {
+                total += sayi1;
+            }
+            Console.WriteLine(total.ToString());
+        }
         static void Main(string[] args)
         {
-            soru7();
+            soru8();
             Console.ReadKey();
 
         }
