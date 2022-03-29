@@ -136,11 +136,21 @@ namespace Console_review
             {
                 toplam += i * i;
             }
-Console.WriteLine(toplam.ToString());
+            Console.WriteLine(toplam.ToString());
+        }
+        static void soru10()
+        {
+            double price = Convert.ToDouble(Console.ReadLine());
+            if (price > 200)
+            {
+                price -= (price * 10 / 100);
+            }
+            price *= 1.18;
+            Console.WriteLine(price.ToString());
         }
         static void Main(string[] args)
         {
-            soru9();
+            soru10();
             Console.ReadKey();
 
         }
