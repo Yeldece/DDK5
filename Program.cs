@@ -363,10 +363,18 @@ namespace Console_review
             }
         }
         #endregion
-
+        #region telefonNumarasi
+        static void telefonNumarasi()
+        {
+            Console.WriteLine("Telefon numaranizi basinda ulke kodu ile giriniz: ");
+            string num = Console.ReadLine();
+            num = num.Substring(3).Trim();
+            Console.WriteLine(num);
+        }
+        #endregion
         static void Main(string[] args)
         {
-            soru19();
+            telefonNumarasi();
             Console.ReadKey();
         }
     }
