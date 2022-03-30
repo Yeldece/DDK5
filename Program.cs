@@ -386,8 +386,8 @@ namespace Console_review
             }
         }
         #endregion
-        #region arraySoru2
-        static void arraySoru2()
+        #region stringMethodSoru2
+        static void stringMethodSoru2()
         {
             string[] isimler = { "cagatay", "emre", "ali", "Abdullah", "ayse" };
             int adet = 0;
@@ -398,8 +398,8 @@ namespace Console_review
             }
         }
         #endregion
-        #region  arraySoru3
-        static void arraySoru3()
+        #region  stringMethodSoru3
+        static void stringMethodSoru3()
         {
             string[] isimler = { "cagatay", "emre", "ali", "Abdullah", "ayse" };
             string[] isimler2 = new string[isimler.Length];
@@ -410,7 +410,7 @@ namespace Console_review
         }
         #endregion
         #region  soru4
-        static void arraySoru4()
+        static void stringMethodSoru4()
         {
             string[] isimler = { "cagatay", "emre", "ali", "Abdullah", "ayse" };
             int adet = 0;
@@ -418,6 +418,89 @@ namespace Console_review
             {
                 if (isimler[i].ToLower().StartsWith('m'))
                     adet++;
+            }
+        }
+        #endregion
+        #region stringMethodSoru5
+        static void stringMethodSoru5()
+        {
+            string[] isimler = { "Çağatay", "Şivan", "Emre", "Dilek", "Abdullah", "Mehmet", "Ece" };
+            int adet = 0;
+            foreach (string isim in isimler)
+            {
+                string[] partion = isim.ToLower().Split('a');
+                if (partion.Length == 3)
+                    adet++;
+            }
+        }
+        #endregion
+        #region stringMethodSoru6
+        static void stringMethodSoru6()
+        {
+            string[] isimler = { "Çağatay", "Şivan", "Emre", "Dilek", "Abdullah", "Mehmet", "Ece" };
+            string[] sonKarakterler = new string[isimler.Length];
+            for (int i = 0; i < isimler.Length; i++)
+            {
+                sonKarakterler[i] = isimler[i].Trim().Substring(isimler[i].Length - 1, 1);
+            }
+
+        }
+        #endregion
+        #region  stringMethodSoru7
+        static void stringMethodSoru7()
+        {
+            string[] isimler = { "Çağatay", "Şivan", "Emre", "Dilek", "Abdullah", "Mehmet", "Ece" };
+            int adet = 0;
+            foreach (string isim in isimler)
+            {
+                if (isim.Trim().Substring(isim.Length - 1, 1) == "e")
+                    adet++;
+            }
+        }
+        #endregion
+        #region  stringMethodSoru8
+        static void stringMethodSoru8()
+        {
+            string[] isimler = { "Çağatay", "Şivan", "Emre", "Dilek", "Abdullah", "Mehmet", "Ece" };
+            for (int i = 0; i < isimler.Length; i++)
+            {
+                if (isimler[i].Length < 10)
+                {
+                    while (isimler[i].Length < 10)
+                    {
+                        isimler[i] += "*";
+                    }
+                }
+            }
+        }
+        #endregion
+        #region  stringMethodSoru9
+        static void stringMethodSoru9()
+        {
+            string num = "+90 543 733 14 70 ";
+            num = num.Replace("+90", "").Replace(" ", "");
+            string formatNum = "(" + num.Substring(0, 3) + ")" + num.Substring(3);
+        }
+        #endregion
+        #region stringMethodSoru10
+        static void stringMethodSoru10()
+        {
+            string[] isimler = { "Çağatay", "Şivan", "Emre", "Dilek", "Abdullah", "Mehmet", "Ece" };
+            string butunMetin = "";
+            foreach (string isim in isimler)
+            {
+                butunMetin += isim + ", ";
+            }
+        }
+        #endregion
+        #region stringMethodSoru11
+        static void stringMethodSoru11()
+        {
+            string[] isimler = { "Çağatay", "Şivan", "Emre", "Dilek", "Abdullah", "Mehmet", "Ece" };
+            string[] isimlerBuyuk = new string[isimler.Length];
+            for (int i = 0; i < isimler.Length; i++)
+            {
+                isimlerBuyuk[i].Replace('a', 'A');
             }
         }
         #endregion
