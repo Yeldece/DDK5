@@ -341,7 +341,7 @@ namespace Console_review
         }
         #endregion
         #region  soru19
-        void soru19()
+        static void soru19()
         {
             Console.WriteLine("Ucgenin tabani olacak sayiyi giriniz: ");
             int taban = Convert.ToInt32(Console.ReadLine());
