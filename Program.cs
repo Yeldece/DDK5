@@ -341,19 +341,32 @@ namespace Console_review
         }
         #endregion
         #region  soru19
-        static void soru19()
+        void soru19()
         {
             Console.WriteLine("Ucgenin tabani olacak sayiyi giriniz: ");
             int taban = Convert.ToInt32(Console.ReadLine());
             int width = taban * 2;
             for (int line = 0; line < taban; line++)
             {
-
+                int position = width / 2 - line;
+                int amount = line + 1;
+                for (int j = 1; j <= width; j++)
+                {
+                    if (j >= position && amount > 0)
+                    {
+                        Console.Write("*");
+                        amount--;
+                    }
+                    Console.Write(" ");
+                }
+                Console.WriteLine();
             }
         }
         #endregion
+
         static void Main(string[] args)
         {
+            soru19();
             Console.ReadKey();
         }
     }
