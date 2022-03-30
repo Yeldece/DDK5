@@ -368,14 +368,62 @@ namespace Console_review
         {
             Console.WriteLine("Telefon numaranizi basinda ulke kodu ile giriniz: ");
             string num = Console.ReadLine();
-            num = num.Substring(3).Trim();
-            Console.WriteLine(num);
+            if (!String.IsNullOrEmpty(num))
+            {
+                num = num.Substring(3).Trim();
+                Console.WriteLine(num);
+            }
+        }
+        #endregion
+        #region toUpper
+        static void arrayToUpper()
+        {
+            string[] isimler = { "cagatay", "emre", "ali", "Abdullah", "ayse" };
+            string[] isimlerBuyuk = new string[isimler.Length];
+            for (int i = 0; i < isimler.Length; i++)
+            {
+                isimlerBuyuk[i] = isimler[i].ToUpper();
+            }
+        }
+        #endregion
+        #region arraySoru2
+        static void arraySoru2()
+        {
+            string[] isimler = { "cagatay", "emre", "ali", "Abdullah", "ayse" };
+            int adet = 0;
+            for (int i = 0; i < isimler.Length; i++)
+            {
+                if (isimler[i].Length <= 4)
+                    adet++;
+            }
+        }
+        #endregion
+        #region  arraySoru3
+        static void arraySoru3()
+        {
+            string[] isimler = { "cagatay", "emre", "ali", "Abdullah", "ayse" };
+            string[] isimler2 = new string[isimler.Length];
+            for (int i = 0; i < isimler.Length; i++)
+            {
+                isimler2[i] = isimler[i].Substring(1);
+            }
+        }
+        #endregion
+        #region  soru4
+        static void arraySoru4()
+        {
+            string[] isimler = { "cagatay", "emre", "ali", "Abdullah", "ayse" };
+            int adet = 0;
+            for (int i = 0; i < isimler.Length; i++)
+            {
+                if (isimler[i].ToLower().StartsWith('m'))
+                    adet++;
+            }
         }
         #endregion
         static void Main(string[] args)
         {
-            telefonNumarasi();
-            Console.ReadKey();
+            Console.Read();
         }
     }
 }
