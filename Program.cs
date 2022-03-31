@@ -357,7 +357,7 @@ namespace Console_review
                         Console.Write("*");
                         amount--;
                     }
-                    Console.Write(" ");
+                    Console.Write("1");
                 }
                 Console.WriteLine();
             }
@@ -494,6 +494,7 @@ namespace Console_review
         }
         #endregion
         #region stringMethodSoru11
+
         static void stringMethodSoru11()
         {
             string[] isimler = { "Çağatay", "Şivan", "Emre", "Dilek", "Abdullah", "Mehmet", "Ece" };
@@ -504,9 +505,118 @@ namespace Console_review
             }
         }
         #endregion
+        #region methodsoru2
+        static int methodSoru2(string text)
+        {
+            {
+                int uzunluk = 0;
+                foreach (char c in text)
+                {
+                    uzunluk++;
+                }
+                return uzunluk;
+            }
+        }
+        #endregion
+        #region method soru1 kdv
+        static double methodSoru1(int price)
+        {
+            double result;
+            if (price > 200)
+            {
+                result = price * 1.08;
+            }
+            else
+            {
+                result = price * 1.18;
+            }
+            return result;
+        }
+        #endregion
+        #region  methodSoru3
+        static string methodSoru3(string metin1, string metin2)
+        {
+            metin1 = metin1.ToUpper();
+            metin2 = metin2.ToUpper();
+            string metin3 = metin1 + " " + metin2;
+            return metin3;
+        }
+        #endregion
+        #region methodSoru4
+        static int methodSoru4(string metin)
+        {
+            metin = metin.ToLower();
+            int sayac = 0;
+            for (int i = 0; i < metin.Length; i++)
+            {
+                if (metin[i] == 'a')
+                {
+                    sayac++;
+                }
+            }
+            return sayac;
+
+        }
+        #endregion
+        #region  methodSoru5
+        static string methodSoru5(string metin)
+        {
+            metin = metin.Trim();
+            string metin2 = metin[0].ToString().ToUpper() + metin.Substring(1);
+            return metin2;
+        }
+        #endregion
+        #region methodSoru7
+        static string methodSoru7(string metina)
+        {
+            string metinb = "";
+            if (metina.Length > 2)
+            {
+                metinb = metina.Substring(0, 3);
+            }
+            else if (metina.Length == 2)
+            {
+                metinb = metina.Substring(0, 2);
+            }
+            return metinb;
+        }
+        #endregion
+        #region  methodSoru11
+        static string[] methodSoru11(string metin)
+        {
+            string[] sonuc;
+            if (metin.Length % 2 == 1)
+            {
+                sonuc = new string[metin.Length / 2 + 1];
+            }
+            else
+            {
+                sonuc = new string[metin.Length / 2];
+            }
+            int cift = 1;
+            for (int i = 0, j = 0; i < metin.Length; i++)
+            {
+                if (cift < 3)
+                {
+                    sonuc[j] += metin[i];
+                    cift++;
+                }
+                else
+                {
+                    cift = 1;
+                    j++;
+                    i--;
+                }
+            }
+            return sonuc;
+        }
+        #endregion
+
+
         static void Main(string[] args)
         {
-            Console.Read();
+            string[] yyy = methodSoru11("burak");
+            Console.ReadKey();
         }
     }
 }
