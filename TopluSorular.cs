@@ -1,7 +1,7 @@
 using System;
 namespace Console_review
 {
-    class Program
+    class TopluSorular
     {
         #region soru6
         static void soru6()
@@ -611,12 +611,16 @@ namespace Console_review
             return sonuc;
         }
         #endregion
-
-
-        static void Main(string[] args)
+        #region methodSoru21
+        static decimal methodSoru21(decimal degreeInCelcius)
         {
-            string[] yyy = methodSoru11("burak");
-            Console.ReadKey();
+            decimal degreeInF = (degreeInCelcius * 9 / 5) + 32;
+            return degreeInF;
         }
+        #endregion
+        // static void Main(string[] args)
+        // {
+        //     Console.ReadKey();
+        // }
     }
 }
