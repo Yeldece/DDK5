@@ -311,9 +311,10 @@ namespace Console_review
                 for (int j = 1; j <= 5; j++)
                 {
                     Console.Write(Num + " ");
-                    Num++;
+                    Num += i;
                 }
                 Console.WriteLine();
+                Num = i + 2;
             }
         }
         #endregion
