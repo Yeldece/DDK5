@@ -1,7 +1,7 @@
 using System;
 namespace Console_review
 {
-    class Program
+    class AlgoritmaSorulari
     {
         #region Soru1
         //10 kez Hello world!
@@ -318,10 +318,19 @@ namespace Console_review
             }
         }
         #endregion
-        static void Main(string[] args)
+        #region  Soru20
+        static void Soru20()
         {
-            Soru19();
-            Console.Read();
+            int Num = Convert.ToInt32(Console.ReadLine());
+            int Basamak = 0;
+            int TempNum = Num;
+            while (TempNum % 10 < 10)
+            {
+                TempNum %= 10;
+                Basamak++;
+            }
+
         }
+        #endregion
     }
 }
