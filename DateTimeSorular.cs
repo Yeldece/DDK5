@@ -1,7 +1,7 @@
 using System;
 namespace Console_review
 {
-    class Program
+    class DateTimeSorular
     {
         #region  Soru1
         //Dogdugumdan beri kac gun gecmis
@@ -56,10 +56,6 @@ namespace Console_review
             return total;
         }
         #endregion
-        static void Main(string[] args)
-        {
-            double x = Soru9();
-            Console.ReadKey();
-        }
+        
     }
 }
