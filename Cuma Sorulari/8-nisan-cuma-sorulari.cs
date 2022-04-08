@@ -123,9 +123,63 @@ namespace Console_review
             }
         }
         #endregion
+        #region Soru11
+        //Check github.com/takintek
+        static void Soru11()
+        {
+            List<string> films = new List<string>();
+            List<int> years = new List<int>();
+            using (var webClient = new System.Net.WebClient())
+            {
+                webClient.Headers.Add("Accept-Language", "en-us");
+                string result = webClient.DownloadString("https://www.imdb.com/chart/top/");
+                string tBody = "<tbody class=\"lister-list\">";
+                int tbodyStartIndex = result.IndexOf(tBody);
+                int tBodyEndIndex = result.IndexOf("</tbody>");
+                int tbodyLength = result.Length - tbodyStartIndex;
+                string tBodyContent = result.Substring(tbodyStartIndex + tBody.Length, (tBodyEndIndex - tbodyStartIndex));
+                string[] trList = tBodyContent.Split("</tr>");
+                foreach (var item in trList)
+                {
+                    string[] tdList = item.Split("</td>");
+                    if (tdList.Length > 3)
+                    {
+                        string tdContent = tdList[1];
+                        int nameStartPoint = tdContent.IndexOf(">", tdContent.IndexOf("<a")) + 1;
+                        int nameEndPoint = tdContent.IndexOf("</a>");
+                        string filmTitle = tdContent.Substring(nameStartPoint, nameEndPoint - nameStartPoint);
+                        int yearStart = tdContent.IndexOf(">", tdContent.IndexOf("<span")) + 2;
+                        int yearEnd = tdContent.IndexOf("</span>") - 2;
+                        int year = Convert.ToInt32(tdContent.Substring(yearStart, yearEnd - yearStart + 1));
+                        films.Add(filmTitle);
+                        years.Add(year);
+                    }
+                }
+            }
+            //1) Kullanıcın ekrandan girdiği adede göre film göstereceğim. Yani kullanıcı 10 girerse SADECE ilk 10 film gösterilecek
+            //Console.WriteLine("Lütfen gösterilmesini istediğiniz film adedini giriniz!");
+            //int showCount = Convert.ToInt32(Console.ReadLine());
+            //Take metodu bana alınacak data sayısını söyler.
+            // List<string> showFilms = films.Take(showCount).ToList();
+            //2)  Listede 10lu bir sayfalama olduğunu var sayıyorum. Kullanıcı dışarıdan sayfa sayısını girdiğinde o sayfa sayısına ait filmleri göstereceğim.
+            //Console.WriteLine("Lütfen kaçıncı sayfayı görmek istediğinizi belirtiniz!");
+            //int pageNumber = Convert.ToInt32(Console.ReadLine());
+            //List<string> showFilms = films.Skip(10).Take(10).ToList();
+            // Kullanıcı aradığı filmi girsin. İçerisinde o kelime geçenleri listele
+            Console.WriteLine("Lütfen aradığınız filmi belirtiniz!");
+            string searchWord = Console.ReadLine().ToLower();
+            List<string> showFilms = films.Where(q => q.ToLower().Contains(searchWord)).ToList();
+
+            foreach (var item in showFilms)
+            {
+                Console.WriteLine(item);
+            }
+        }
+        #endregion
+
         static void Main(string[] args)
         {
-            Soru8(Soru1());
+            Soru11();
         }
     }
 }

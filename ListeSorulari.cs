@@ -73,6 +73,7 @@ namespace Console_review
         #region Soru2
         //Imdb den top 250 listesini cekmek,
         //kod sahibi github.com/yakintek
+        //Code resource github.com/yakintek
         static void Soru2()
         {
             List<string> films = new List<string>();
