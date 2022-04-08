@@ -220,10 +220,5 @@ namespace Console_review
                 }
             }
         }
-        static void Main(string[] args)
-        {
-            DersSoru9();
-            Console.Read();
-        }
     }
 }
