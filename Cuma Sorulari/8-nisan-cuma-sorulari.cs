@@ -125,10 +125,9 @@ namespace Console_review
         #endregion
         #region Soru11
         //Check github.com/takintek
-        static void Soru11()
+        static List<string> Soru11()
         {
             List<string> films = new List<string>();
-            List<int> years = new List<int>();
             using (var webClient = new System.Net.WebClient())
             {
                 webClient.Headers.Add("Accept-Language", "en-us");
@@ -151,35 +150,48 @@ namespace Console_review
                         int yearStart = tdContent.IndexOf(">", tdContent.IndexOf("<span")) + 2;
                         int yearEnd = tdContent.IndexOf("</span>") - 2;
                         int year = Convert.ToInt32(tdContent.Substring(yearStart, yearEnd - yearStart + 1));
-                        films.Add(filmTitle);
-                        years.Add(year);
+                        films.Add($"{filmTitle}({year})");
                     }
                 }
             }
-            //1) Kullanıcın ekrandan girdiği adede göre film göstereceğim. Yani kullanıcı 10 girerse SADECE ilk 10 film gösterilecek
-            //Console.WriteLine("Lütfen gösterilmesini istediğiniz film adedini giriniz!");
-            //int showCount = Convert.ToInt32(Console.ReadLine());
-            //Take metodu bana alınacak data sayısını söyler.
-            // List<string> showFilms = films.Take(showCount).ToList();
-            //2)  Listede 10lu bir sayfalama olduğunu var sayıyorum. Kullanıcı dışarıdan sayfa sayısını girdiğinde o sayfa sayısına ait filmleri göstereceğim.
-            //Console.WriteLine("Lütfen kaçıncı sayfayı görmek istediğinizi belirtiniz!");
-            //int pageNumber = Convert.ToInt32(Console.ReadLine());
-            //List<string> showFilms = films.Skip(10).Take(10).ToList();
-            // Kullanıcı aradığı filmi girsin. İçerisinde o kelime geçenleri listele
-            Console.WriteLine("Lütfen aradığınız filmi belirtiniz!");
-            string searchWord = Console.ReadLine().ToLower();
-            List<string> showFilms = films.Where(q => q.ToLower().Contains(searchWord)).ToList();
-
-            foreach (var item in showFilms)
+            return films;
+        }
+        #endregion
+        #region Soru12
+        //Filmleri tarihe gore sirala
+        //Order movies based on release date
+        static List<string> Soru12(List<string> films, bool ascending = true)
+        {
+            if (ascending)
+            {
+                return films.OrderBy(x => Convert.ToInt32(x.Split("(")[^1][..^1])).ToList();
+            }
+            else
+            {
+                return films.OrderByDescending(x => Convert.ToInt32(x.Split("(")[^1][..^1])).ToList();
+            }
+        }
+        #endregion
+        #region  Soru13
+        //Girilen yila gore filtrele
+        //filter based on input year
+        static List<string> Soru13(List<string> films)
+        {
+            Console.WriteLine("Hangi yila ait filmleri gormek istiyorsunuz: ");
+            int year = Convert.ToInt32(Console.ReadLine());
+            return films.FindAll(x => Convert.ToInt32(x.Split("(")[^1][..^1]) == year);
+        }
+        #endregion
+        static void PrintList(List<string> list)
+        {
+            foreach (var item in list)
             {
                 Console.WriteLine(item);
             }
         }
-        #endregion
-
-        static void Main(string[] args)
-        {
-            Soru11();
-        }
+        // static void Main(string[] args)
+        // {
+        //     PrintList(Soru13(Soru11()));
+        // }
     }
 }

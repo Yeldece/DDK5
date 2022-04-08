@@ -56,6 +56,6 @@ namespace Console_review
             return total;
         }
         #endregion
-        
+
     }
 }
