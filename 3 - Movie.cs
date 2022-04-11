@@ -3,7 +3,8 @@ namespace Console_review
 {
     class Movie
     {
-        public string Title;
-        public int Year;
+        public string Title { get; set; }
+        public int Year { get; set; }
+        public float Rating { get; set; }
     }
 }
