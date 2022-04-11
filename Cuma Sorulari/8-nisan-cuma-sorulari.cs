@@ -124,7 +124,8 @@ namespace Console_review
         }
         #endregion
         #region Soru11
-        //Check github.com/takintek
+        //IMDB top 250 indir
+        //Get IMDB top 250   
         static List<string> Soru11()
         {
             List<string> films = new List<string>();
