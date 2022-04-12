@@ -1,5 +1,5 @@
 using System;
-namespace Console_review
+namespace Console_review.Models
 {
     class Product
     {
