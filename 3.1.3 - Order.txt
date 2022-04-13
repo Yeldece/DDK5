@@ -1,0 +1,28 @@
+using System;
+namespace Console_review.Models
+{
+    class Order
+    {
+        public int id { get; set; }
+        public string customerId { get; set; }
+        public int employeeId { get; set; }
+        public string orderDate { get; set; }
+        public DateTime orderDateInDate { get; set; }
+        public string requiredDate { get; set; }
+        public DateTime requiredDateInDate { get; set; }
+        public string shippedDate { get; set; }
+        public DateTime shippedDateInDate { get; set; }
+        public int shipVia { get; set; }
+        public double freight { get; set; }
+        public string shipName { get; set; }
+        public ShipAddress shipAddress = new ShipAddress();
+    }
+    public class ShipAddress
+    {
+        public string street { get; set; }
+        public string city { get; set; }
+        public string region { get; set; }
+        public int postalCode { get; set; }
+        public string country { get; set; }
+    }
+}
