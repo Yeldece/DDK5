@@ -1,6 +1,9 @@
 using System;
 namespace Console_review.Models
 {
+    /// <summary>
+    /// Product class for json version, no constructor yet
+    /// </summary>
     class Product
     {
         public int id { get; set; }

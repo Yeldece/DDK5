@@ -46,5 +46,9 @@ namespace Console_review
                 order.OrderDateInDate = DateTime.ParseExact(order.OrderDate, "yyyy-MM-dd HH:mm:ss.fff", cultureInfo);
             }
         }
+        public void GetTopSale(List<Order> orderList)
+        {
+
+        }
     }
 }
