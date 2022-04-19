@@ -4,32 +4,22 @@ namespace Library
 {
     public class Subscriber
     {
-        public string Name { get; set; }
-        public string SirName { get; set; }
+        public readonly string Name;
+        public readonly string SirName;
         public readonly string TCNo;
-        public string Address { get; set; }
-        public int PhoneNumber { get; set; }
-        public Subscriber(string name, string sirName, string tcNo, int phoneNumber)
+        public string Address;
+        public readonly string PhoneNumber;
+        public Subscriber(string name, string sirName, string tcNo, string phoneNumber)
         {
-            if (name != null && name.Length > 2)
-            {
-                Name = name;
-            }
-            else
-            {
-                throw new MyException("Name is wrong!");
-            }
+            Name = name;
+            SirName = sirName;
+            TCNo = tcNo;
+            PhoneNumber = phoneNumber;
+            Address = default;
         }
-
-        public class MyException : System.Exception
+        public Subscriber(string name, string sirName, string tcNo, string phoneNumber, string address) : this(name, sirName, tcNo, phoneNumber)
         {
-            public MyException() : base() { }
-            public MyException(string message) : base(message) { }
-            public MyException(string message, System.Exception inner) : base(message, inner) { }
-            protected MyException(
-                System.Runtime.Serialization.SerializationInfo info,
-                System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+            address = address;
         }
-
     }
 }

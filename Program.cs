@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using System.Globalization;
+using Library;
 namespace Console_review
 {
     class Program
@@ -12,8 +13,7 @@ namespace Console_review
             await pManager.GetCategories();
             await pManager.GetOrders();
             pManager.GetTopSale(pManager.orderList);
-            {
-            }
+            Subscriber selam = Library.SubscribeManager.MakeSubscription("x", "x", "x", "x");
         }
     }
 }

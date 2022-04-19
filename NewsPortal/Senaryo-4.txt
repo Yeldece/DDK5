@@ -1,0 +1,27 @@
+﻿Haber Portalı
+
+BaseModel -> Abstract -> ID, AddDate ( default değer olacak)
+
+News ( constractur metottan title alacak)
+
+Title -> Helper kullanılacak
+Content -> String bir property
+SubContent -> Contentteki değerin ilk 100 karakteri otomatik subcontent olacak subcontent ayrıca kullanıcı tarafından set edilmeyecek!!
+AdminUser -> class
+
+
+AdminUser
+
+EMail -> toLower helper kullanılacak
+Password -> Helper kullanılacak (MD5)
+
+
+Image
+
+Path -> string
+
+
+NewsImage
+
+News -> class
+Image -> class
