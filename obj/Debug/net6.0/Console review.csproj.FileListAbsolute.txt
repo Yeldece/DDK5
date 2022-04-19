@@ -1,16 +1,15 @@
-C:\Users\z004j87c\Desktop\Console review\obj\Debug\net6.0\Console review.csproj.AssemblyReference.cache
-C:\Users\z004j87c\Desktop\Console review\obj\Debug\net6.0\Console review.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\z004j87c\Desktop\Console review\obj\Debug\net6.0\Console review.csproj.CoreCompileInputs.cache
-C:\Users\z004j87c\Desktop\Console review\bin\Debug\net6.0\Console review.exe
-C:\Users\z004j87c\Desktop\Console review\bin\Debug\net6.0\Console review.deps.json
-C:\Users\z004j87c\Desktop\Console review\bin\Debug\net6.0\Console review.runtimeconfig.json
-C:\Users\z004j87c\Desktop\Console review\bin\Debug\net6.0\Console review.dll
-C:\Users\z004j87c\Desktop\Console review\bin\Debug\net6.0\Console review.pdb
-C:\Users\z004j87c\Desktop\Console review\bin\Debug\net6.0\Library.dll
-C:\Users\z004j87c\Desktop\Console review\bin\Debug\net6.0\Library.pdb
-C:\Users\z004j87c\Desktop\Console review\obj\Debug\net6.0\Console review.csproj.CopyComplete
-C:\Users\z004j87c\Desktop\Console review\obj\Debug\net6.0\Console review.dll
-C:\Users\z004j87c\Desktop\Console review\obj\Debug\net6.0\refint\Console review.dll
-C:\Users\z004j87c\Desktop\Console review\obj\Debug\net6.0\Console review.pdb
-C:\Users\z004j87c\Desktop\Console review\obj\Debug\net6.0\Console review.genruntimeconfig.cache
-C:\Users\z004j87c\Desktop\Console review\obj\Debug\net6.0\ref\Console review.dll
+C:\Users\jay06\Documents\GitHub\Console-review\obj\Debug\net6.0\Console review.csproj.AssemblyReference.cache
+C:\Users\jay06\Documents\GitHub\Console-review\obj\Debug\net6.0\Console review.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jay06\Documents\GitHub\Console-review\obj\Debug\net6.0\Console review.AssemblyInfoInputs.cache
+C:\Users\jay06\Documents\GitHub\Console-review\obj\Debug\net6.0\Console review.AssemblyInfo.cs
+C:\Users\jay06\Documents\GitHub\Console-review\obj\Debug\net6.0\Console review.csproj.CoreCompileInputs.cache
+C:\Users\jay06\Documents\GitHub\Console-review\bin\Debug\net6.0\Console review.exe
+C:\Users\jay06\Documents\GitHub\Console-review\bin\Debug\net6.0\Console review.deps.json
+C:\Users\jay06\Documents\GitHub\Console-review\bin\Debug\net6.0\Console review.runtimeconfig.json
+C:\Users\jay06\Documents\GitHub\Console-review\bin\Debug\net6.0\Console review.dll
+C:\Users\jay06\Documents\GitHub\Console-review\bin\Debug\net6.0\Console review.pdb
+C:\Users\jay06\Documents\GitHub\Console-review\obj\Debug\net6.0\Console review.dll
+C:\Users\jay06\Documents\GitHub\Console-review\obj\Debug\net6.0\refint\Console review.dll
+C:\Users\jay06\Documents\GitHub\Console-review\obj\Debug\net6.0\Console review.pdb
+C:\Users\jay06\Documents\GitHub\Console-review\obj\Debug\net6.0\Console review.genruntimeconfig.cache
+C:\Users\jay06\Documents\GitHub\Console-review\obj\Debug\net6.0\ref\Console review.dll

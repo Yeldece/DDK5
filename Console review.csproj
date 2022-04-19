@@ -4,15 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>Console_review</RootNamespace>
-            <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-        <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-<ItemGroup>
-<ProjectReference Include="Library\Library.csproj" />
-</ItemGroup>
-<ItemGroup>
-  <Folder Include="Library\" />
-</ItemGroup>
 </Project>

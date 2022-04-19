@@ -7,27 +7,14 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "Console review/1.0.0": {
-        "dependencies": {
-          "Library": "1.0.0"
-        },
         "runtime": {
           "Console review.dll": {}
-        }
-      },
-      "Library/1.0.0": {
-        "runtime": {
-          "Library.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Console review/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Library/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
