@@ -1,0 +1,26 @@
+﻿
+
+Vehicle ( Base Abstarct Class)
+
+Id -> int
+Brand -> Class
+Year -> Int
+
+CalcVisaDate protected virtual metot (int alır int döner. Dışarıdan aldığı yılın 10 sene sonrasını döner)
+
+
+Car
+
+VisaDate -> SADECE GET EDİLİR
+
+Truck
+
+VisaDate -> SADECE GET EDİLİR
+
+
+Brand
+
+Name -> String
+Logo -> String
+
+

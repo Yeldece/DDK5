@@ -1,0 +1,44 @@
+﻿KÜTÜPHANE
+
+
+
+Yazar
+Ad
+Soyad
+Ülke
+List<Kitap>
+
+
+Kitap
+Ad
+Tarih
+List<Yazar>
+Tur (class)
+Yayinevi (class)
+ISBNNo
+KısaAciklama
+
+
+
+
+Tür ( Polisiye, Gerilim, Aşk)
+Ad
+
+Yayınevi
+Ad
+KurulusTarih
+List<Kitap>
+
+Üye
+Ad
+Soyad
+TCNo
+Adres
+Telefon
+
+
+//üye kütüphaneden yaptığı işlemin geçmişin tutacak class veya class ları nasıl dizayn ederim.. İşlemde kitabı alma ve kitabı bırakma ( geç bıraktıysa üyeye ceza faturası çıkarma vbç senaryolar)
+
+
+
+

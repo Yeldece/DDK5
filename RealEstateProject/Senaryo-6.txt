@@ -1,0 +1,26 @@
+﻿Emlak  (Instance almak için lokasyon ZORUNLU)
+
+Lokasyon -> String
+Alan -> int
+SatisFiyat -> decimal
+KiraFiyat -> decimal
+SatisVergi -> SET EDİLEMEZ! satış fiyatının %1.2 sidir!
+KiraVergi -> SET EDİLEMEZ! kira fiyatının  %5 idir
+
+Ev (ev oluştururken oda sayısı vermek zorunlu Instance - Constructor)
+OdaSayisi
+Kat
+EbeveynBanyoVarMi -> true , false  -> set edilemez!!! luks propu true ise bu da true dur değilse false dur.
+LuksMu -> boole  
+
+
+Arsa
+
+ImaraAcikMi -> bool
+
+
+Villa  ( ev class ından miras alacak )
+
+HavuzVarMi -> bool
+BahceAlan -> Int
+GarajAlan -> Int

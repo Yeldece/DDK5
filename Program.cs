@@ -14,6 +14,7 @@ namespace Console_review
             await pManager.GetOrders();
             pManager.GetTopSale(pManager.orderList);
 
+
         }
     }
 }

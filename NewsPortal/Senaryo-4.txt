@@ -2,7 +2,7 @@
 
 BaseModel -> Abstract -> ID, AddDate ( default değer olacak)
 
-News ( constractur metottan title alacak)
+        News ( constractur metottan title alacak)
 
 Title -> Helper kullanılacak
 Content -> String bir property
