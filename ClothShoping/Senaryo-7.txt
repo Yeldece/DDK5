@@ -1,0 +1,32 @@
+﻿BaseModel
+
+ID -> string
+AddDate -> DateTime ( default değeri now )
+Renk
+Fiyat
+KDVFiyat ( set edilemez otomatik %18 den hesaplanacak)
+
+
+Ayakkabı -> , IIndirimHesapla
+No
+
+Tshirt -> IBeden, IKumas, IIndirimHesapla
+
+SweatShirt -> IBeden, IKumas, IIndirimHesapla
+
+
+IBeden
+BedenNo
+
+IKumas 
+KumasTur
+
+IIndirimHesapla -> dışarıdan decimal alan ve dışarıya decimal dönen INTERFACE
+
+
+Category -> ( spor, klasik)
+Name
+
+
+Mevsim ( ENUM olacak)
+
