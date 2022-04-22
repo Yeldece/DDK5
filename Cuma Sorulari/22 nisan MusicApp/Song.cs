@@ -15,7 +15,6 @@ namespace MusicApp
         }
         public void Play(Song song)
         {
-
         }
     }
 }

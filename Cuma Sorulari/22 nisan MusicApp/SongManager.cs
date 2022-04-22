@@ -6,7 +6,7 @@ namespace MusicApp
     {
         public string FormatLastPlayed(ISongEntity song)
         {
-            return song.LastPlayed.ToString("D MMMM yyyy, dddd", CultureInfo.CurrentCulture);
+            return song.LastPlayed.ToString("dd MMMM yyyy, dddd", CultureInfo.CurrentCulture);
         }
         public void PlaySong(IPlayable playable)
         {
