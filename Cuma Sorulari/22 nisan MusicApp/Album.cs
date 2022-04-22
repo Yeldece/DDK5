@@ -8,7 +8,6 @@ namespace MusicApp
         public List<Song> Songs = new();
         public int NumberOfSongs { get => Songs.Count(); }
         public string ImagePath { get; set; }
-        public Singer SingBy { get; set; }
-        
+        public Artist SingBy { get; set; }
     }
 }

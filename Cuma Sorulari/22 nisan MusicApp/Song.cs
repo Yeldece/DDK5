@@ -8,7 +8,7 @@ namespace MusicApp
         public DateTime PublishDate { get; set; }
         public DateTime AnnounceDate { get; set; }
         public double Duration { get; set; }
-        public Singer SingBy { get; set; }
+        public Artist SingBy { get; set; }
         public Song(string name)
         {
             Name = name;
