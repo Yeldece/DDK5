@@ -3,8 +3,13 @@ namespace MusicApp
 {
     public abstract class BaseMusicModal
     {
-        public int ID { get; set; }
+        protected int IDCounter = 1;
+        public int ID { get; init; }
         protected DateTime _AddDate = DateTime.Now;
         public DateTime AddDate { get => _AddDate; set => _AddDate = value; }
+        public BaseMusicModal()
+        {
+            ID = IDCounter++;
+        }
     }
 }

@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using System;
-namespace Library;
-public class Library
+namespace Library
 {
-    List<Subscriber> Subscribers = new List<Subscriber>();
-    List<Book> Books = new List<Book>();
+    public class Library
+    {
+        List<Subscriber> Subscribers = new List<Subscriber>();
+        List<Book> Books = new List<Book>();
 
+    }
 }

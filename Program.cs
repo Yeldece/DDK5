@@ -1,8 +1,8 @@
 using System;
-using System.Globalization;
 using Library;
 using ClothShoping;
 using MusicApp;
+using FileOperations;
 namespace Console_review
 {
     class Program
@@ -27,6 +27,8 @@ namespace Console_review
             PlayList myPlaylist = new PlayList();
             myPlaylist.Songs = hidraSongs;
             myPlaylist.Songs.AddRange(mySongs);
+            fileManager fl = new(@"File Operations\cities.txt");
+            fl.CountryHasTopCity();
         }
     }
 }

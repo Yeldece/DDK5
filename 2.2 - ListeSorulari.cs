@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 namespace Console_review
 {
     class ListeSorulari
@@ -16,7 +17,8 @@ namespace Console_review
             while (Words.Count < 11)
             {
                 Console.WriteLine("Kelime giriniz veya baslamak icin `start`");
-                string input = Console.ReadLine().Trim().ToLower();
+                string? input = Console.ReadLine()!.Trim().ToLower();
+
                 if (input == "start")
                 {
                     break;
@@ -39,7 +41,7 @@ namespace Console_review
             {
                 Console.WriteLine(String.Join("", WordChar));
                 Console.WriteLine("Tahmin harfi giriniz");
-                string Guess = Console.ReadLine().Trim().ToLower();
+                string Guess = Console.ReadLine()!.Trim().ToLower();
                 if (Guess.Length == 1 && Char.IsLetter(Convert.ToChar(Guess)))
                 {
                     if (Word.IndexOf(Guess) != -1)
@@ -77,13 +79,15 @@ namespace Console_review
         #region Soru2
         //Imdb den top 250 listesini cekmek, kod sahibi github.com/yakintek
         //Top 250 movies from imdb Code resource github.com/yakintek
-        static void Soru2()
+        public static async Task Soru2()
         {
             List<string> films = new List<string>();
-            using (var webClient = new System.Net.WebClient())
+            using (var httpWebClient = new System.Net.Http.HttpClient())
+
             {
-                webClient.Headers.Add("Accept-Language", "en-us");
-                string result = webClient.DownloadString("https://www.imdb.com/chart/top/");
+                httpWebClient.DefaultRequestHeaders.Add("Accept-Language", "en-us");
+                var result = await httpWebClient.GetStringAsync("https://www.imdb.com/chart/top/");
+
                 string tBody = "<tbody class=\"lister-list\">";
                 int tbodyStartIndex = result.IndexOf(tBody);
 
@@ -130,7 +134,7 @@ namespace Console_review
             //List<string> showFilms = films.Skip(10).Take(10).ToList();
             // Kullanıcı aradığı filmi girsin. İçerisinde o kelime geçenleri listele
             Console.WriteLine("Lütfen aradığınız filmi belirtiniz!");
-            string searchWord = Console.ReadLine().ToLower();
+            string? searchWord = Console.ReadLine()!.ToLower();
             List<string> showFilms = films.Where(q => q.ToLower().Contains(searchWord)).ToList();
 
             foreach (var item in showFilms)

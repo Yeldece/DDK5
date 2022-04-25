@@ -418,7 +418,7 @@ namespace Console_review
         static void TelefonNumarasi()
         {
             Console.WriteLine("Telefon numaranizi basinda ulke kodu ile giriniz: ");
-            string num = Console.ReadLine();
+            string? num = Console.ReadLine();
             if (!String.IsNullOrEmpty(num))
             {
                 num = num.Substring(3).Trim();

@@ -1,24 +1,24 @@
 using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-namespace Console_review.Models
+namespace Console_review.Modals
 {
     public class ShipAddress
     {
         [JsonPropertyName("street")]
-        public string Street { get; set; }
+        public string? Street { get; set; }
 
         [JsonPropertyName("city")]
-        public string City { get; set; }
+        public string? City { get; set; }
 
         [JsonPropertyName("region")]
-        public string Region { get; set; }
+        public string? Region { get; set; }
 
         //[JsonPropertyName("postalCode")]
         //public string PostalCode { get; set; }
 
         [JsonPropertyName("country")]
-        public string Country { get; set; }
+        public string? Country { get; set; }
     }
 
     public class Detail
@@ -42,21 +42,21 @@ namespace Console_review.Models
         public int Id { get; set; }
 
         [JsonPropertyName("customerId")]
-        public string CustomerId { get; set; }
+        public string? CustomerId { get; set; }
 
         [JsonPropertyName("employeeId")]
-        public int EmployeeId { get; set; }
+        public int? EmployeeId { get; set; }
 
         [JsonPropertyName("orderDate")]
-        public string OrderDate { get; set; }
+        public string? OrderDate { get; set; }
         public DateTime OrderDateInDate { get; set; }
 
         [JsonPropertyName("requiredDate")]
-        public string RequiredDate { get; set; }
+        public string? RequiredDate { get; set; }
         public DateTime RequiredDateInDate { get; set; }
 
         [JsonPropertyName("shippedDate")]
-        public string ShippedDate { get; set; }
+        public string? ShippedDate { get; set; }
         public DateTime ShipDateInDate { get; set; }
 
         [JsonPropertyName("shipVia")]
@@ -66,12 +66,12 @@ namespace Console_review.Models
         public double Freight { get; set; }
 
         [JsonPropertyName("shipName")]
-        public string ShipName { get; set; }
+        public string? ShipName { get; set; }
 
         [JsonPropertyName("shipAddress")]
-        public ShipAddress ShipAddress { get; set; }
+        public ShipAddress? ShipAddress { get; set; }
 
         [JsonPropertyName("details")]
-        public List<Detail> Details { get; set; }
+        public List<Detail>? Details { get; set; }
     }
 }

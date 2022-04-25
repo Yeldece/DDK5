@@ -4,15 +4,19 @@
 using System;
 namespace Console_review
 {
-    class DateTimeSorular
+    public static class DateTimeSorular
     {
         #region  Soru1
         //Dogdugumdan beri kac gun gecmis
         //How many days passed till I born
-        static int Soru1(DateTime born)
+        /// <summary>
+        /// Pass a DateTime object and amount of passed days will be returned as an integer
+        /// </summary>
+        /// <param name="birthDate"></param>
+        /// <returns>Numer of days passed e.g. 15</returns>
+        public static int Soru1(DateTime birthDate)
         {
-            DateTime dt = DateTime.Now;
-            TimeSpan Dif = dt - born;
+            TimeSpan Dif = DateTime.Now - birthDate;
             return Dif.Days;
         }
         #endregion

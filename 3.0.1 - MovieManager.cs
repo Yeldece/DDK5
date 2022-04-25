@@ -1,18 +1,19 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 namespace Console_review
 {
     class MovieManager
     {
         //IMDB top 250 indir
         //Get IMDB top 250   
-        public List<Movie> GetTop()
+        public async Task<List<Movie>> GetTop()
         {
             List<Movie> MovieList = new List<Movie>();
-            using (var webClient = new System.Net.WebClient())
+            using (var httpClient = new System.Net.Http.HttpClient())
             {
-                webClient.Headers.Add("Accept-Language", "en-us");
-                string result = webClient.DownloadString("https://www.imdb.com/chart/top/");
+                httpClient.DefaultRequestHeaders.Add("Accept-Language", "en-us");
+                string result = await httpClient.GetStringAsync("https://www.imdb.com/chart/top/");
                 string tBody = "<tbody class=\"lister-list\">";
                 int tbodyStartIndex = result.IndexOf(tBody);
                 int tBodyEndIndex = result.IndexOf("</tbody>");
