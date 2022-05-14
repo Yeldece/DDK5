@@ -1,0 +1,48 @@
+CREATE TABLE Users
+(
+    ID INT PRIMARY KEY IDENTITY(1,1),
+    FirstName NVARCHAR(MAX) NOT NULL,
+    LastName NVARCHAR(MAX) NOT NULL,
+    EMail NVARCHAR(MAX) NOT NULL UNIQUE,
+    Password NVARCHAR(MAX) NOT NULL,
+    Registration DATE NOT NULL,
+    Phone NVARCHAR(MAX) NOT NULL,
+    Address NVARCHAR(MAX) NOT NULL,
+    City NVARCHAR(MAX) NOT NULL,
+    Town NVARCHAR(MAX) NOT NULL
+)
+
+CREATE TABLE Items
+(
+    ID INT PRIMARY KEY IDENTITY(1,1),
+    Received DATE NOT NULL,
+    FailureDescriptionUser NVARCHAR(MAX),
+    ServiceInfo NVARCHAR(MAX) NOT NULL,
+    FailureCategoryID INT NOT NULL,
+    Cost MONEY NOT NULL,
+    DeliveryDate DATE,
+    Status INT NOT NULL,
+    EmployeeID int,
+)
+
+CREATE TABLE Employee
+(
+    ID INT PRIMARY KEY IDENTITY(1, 1),
+    FirstName NVARCHAR(MAX) NOT NULL,
+    LastName NVARCHAR(MAX) NOT NULL,
+    PhoneInternal NVARCHAR(MAX) NOT NULL,
+    PhonePersonal NVARCHAR(MAX) NOT NULL
+)
+
+CREATE TABLE FailureCategories
+(
+    ID INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(MAX) NOT NULL,
+    Description NVARCHAR(MAX) NOT NULL
+)
+
+CREATE TABLE Statuses
+(
+    ID INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(MAX) NOT NULL,
+)
