@@ -1,0 +1,14 @@
+CREATE table Product
+(
+    ID INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(500) NOT NULL,
+    CategoryID INT NOT NULL
+)
+
+CREATE TABLE Category
+(
+    ID INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(50) NOT NULL,
+    Description NVARCHAR(255) NOT NULL,
+    SuperCategoryID INT
+)

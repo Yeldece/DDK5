@@ -1,0 +1,22 @@
+CREATE TABLE Employee
+(
+    ID INT PRIMARY KEY IDENTITY(1,1),
+    FirstName NVARCHAR(255) NOT NULL,
+    LastName NVARCHAR(255) NOT NULL,
+    ShiftBegin TIME,
+    SiftEnd TIME
+)
+
+CREATE table Location
+(
+    ID INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(255) NOT NULL
+)
+
+CREATE TABLE Entry
+(
+    ID INT PRIMARY KEY IDENTITY(1,1),
+    EmployeeID INT NOT NULL,
+    LocationID INT NOT NULL,
+    EntryTime DATETIME NOT NULL
+)
