@@ -18,6 +18,9 @@ CREATE TABLE Book
 CREATE TABLE Borrow
 (
     UserID INT NOT NULL,
+    BookID INT NOT NULL,
     Due DATE NOT NULL,
     Return DATE
     )
+
+    
