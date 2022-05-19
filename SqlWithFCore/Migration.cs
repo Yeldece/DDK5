@@ -17,5 +17,6 @@ namespace SqlWithFCore
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Shipper> Shippers { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }
