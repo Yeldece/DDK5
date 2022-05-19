@@ -1,16 +1,33 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 namespace SqlWithFCore.Models
 {
     public class Customer
     {
-        [Colomn(type = "char(5)")]
+        [Column(TypeName = "char(5)")]
         public string CustomerID { get; set; }
-        [StringLength(40)]
+        [MaxLength(40)]
         public string CompanyName { get; set; }
-        [StringLength(30)]
+        [MaxLength(30)]
+        public string? ContactName { get; set; }
+        [MaxLength(30)]
+        public string? ContactTitle { get; set; }
+        [MaxLength(60)]
+        public string? Address { get; set; }
+        [MaxLength(15)]
+        public string? City { get; set; }
+        [MaxLength(15)]
+        public string? Region { get; set; }
+        [MaxLength(10)]
+        public string? PostalCode { get; set; }
+        [MaxLength(15)]
+        public string? Country { get; set; }
+        [MaxLength(24)]
+        public string? Phone { get; set; }
+        [MaxLength(24)]
+        public string? Fax { get; set; }
 
-        public string?  { get; set; }
-    public string? Image { get; set; }
-}
+    }
 }
