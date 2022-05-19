@@ -20,7 +20,7 @@ namespace SqlWithFCore.Models
         [Column(Order = 5)]
         [StringLength(20)]
         public string? QuantityPerUnit { get; set; }
-        [Column(Order = 6,TypeName ="money")]
+        [Column(Order = 6, TypeName = "money")]
         public decimal? UnitPrice { get; set; }
         [Column(Order = 7)]
         public short? UnitsInStock { get; set; }
@@ -28,7 +28,7 @@ namespace SqlWithFCore.Models
         public short? UnitsOnOrder { get; set; }
         [Column(Order = 9)]
         public short? ReorderLevel { get; set; }
-        [Column(Order = 10,TypeName ="bit")]
+        [Column(Order = 10, TypeName = "bit")]
         public bool Discontinued { get; set; }
     }
 }
