@@ -51,7 +51,7 @@ namespace SqlWithFCore.Models
         [Column(Order = 15, TypeName = "ntext")]
         public string? Notes { get; set; }
         [Column(Order = 16)]
+        [ForeignKey("ReportsTo")]
         public int? ReportsTo { get; set; }
-        public Employee employee { get; set; }
     }
 }
