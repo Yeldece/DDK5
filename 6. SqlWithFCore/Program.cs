@@ -1,5 +1,5 @@
 ﻿using System;
-namespace SqlWithEFCore
+namespace SqlWithFCore
 {
     class Program
     {
