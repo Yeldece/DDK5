@@ -1,12 +1,8 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
-<<<<<<< HEAD:6. SqlWithFCore/Models/Product.cs
-namespace SqlWithEFCore.Models
-=======
 using System.ComponentModel.DataAnnotations.Schema;
-namespace SqlWithFCore.Models
->>>>>>> 3fbb6d3820012e881dc1dd5fdad1ebb5eb0874c2:SqlWithFCore/Models/Product.cs
+namespace SqlWithEFCore.Models
 {
     public class Product
     {
@@ -20,7 +16,7 @@ namespace SqlWithFCore.Models
         public Supplier Supplier { get; set; }
         [Column(Order = 4)]
         public int? CategoryID { get; set; }
-        public Category category { get; set; }
+        public virtual Category Category { get; set; }
         [Column(Order = 5)]
         [StringLength(20)]
         public string? QuantityPerUnit { get; set; }

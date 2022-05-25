@@ -1,8 +1,9 @@
+using System;
 using SqlWithEFCore.Models;
 using Microsoft.EntityFrameworkCore;
 namespace SqlWithEFCore
 {
-    public class BloggingContext : DbContext
+    public class NorthWindContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -14,7 +15,7 @@ namespace SqlWithEFCore
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Customer> Customers { get; set; }
-        public DbSet<Shipper> Shippers { get; set; }
-        public DbSet<Order> Orders { get; set; }
+        //public DbSet<Shipper> Shippers { get; set; }
+        //public DbSet<Order> Orders { get; set; }
     }
 }

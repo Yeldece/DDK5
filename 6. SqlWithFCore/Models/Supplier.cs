@@ -1,11 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-<<<<<<< HEAD:6. SqlWithFCore/Models/Supplier.cs
-namespace SqlWithEFCore.Models
-=======
 using System.ComponentModel.DataAnnotations.Schema;
-namespace SqlWithFCore.Models
->>>>>>> 3fbb6d3820012e881dc1dd5fdad1ebb5eb0874c2:SqlWithFCore/Models/Supplier.cs
+namespace SqlWithEFCore.Models
 {
     public class Supplier
     {

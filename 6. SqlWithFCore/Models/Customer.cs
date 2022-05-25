@@ -1,30 +1,20 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-<<<<<<< HEAD:6. SqlWithFCore/Models/Customer.cs
+using Microsoft.EntityFrameworkCore;
 namespace SqlWithEFCore.Models
 {
     public class Customer
     {
-        [Column(TypeName = "char(5)")]
-=======
-using Microsoft.EntityFrameworkCore;
-namespace SqlWithFCore.Models
-{
-    public class Customer
-    {
         [Column(TypeName = "char(5)", Order = 0)]
->>>>>>> 3fbb6d3820012e881dc1dd5fdad1ebb5eb0874c2:SqlWithFCore/Models/Customer.cs
         public string CustomerID { get; set; }
         [Column(Order = 1)]
         [MaxLength(40)]
         public string CompanyName { get; set; }
-<<<<<<< HEAD:6. SqlWithFCore/Models/Customer.cs
         [StringLength(30)]
 
         public string? forgot { get; set; }
         public string? Image { get; set; }
-=======
         [Column(Order = 2)]
         [MaxLength(30)]
         public string? ContactName { get; set; }
@@ -52,6 +42,5 @@ namespace SqlWithFCore.Models
         [Column(Order = 10)]
         [MaxLength(24)]
         public string? Fax { get; set; }
->>>>>>> 3fbb6d3820012e881dc1dd5fdad1ebb5eb0874c2:SqlWithFCore/Models/Customer.cs
     }
 }
