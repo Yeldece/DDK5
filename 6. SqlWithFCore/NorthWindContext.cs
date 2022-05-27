@@ -3,13 +3,15 @@ using SqlWithEFCore.Models;
 using Microsoft.EntityFrameworkCore;
 namespace SqlWithEFCore
 {
+    /// <summary>
+    /// Manages connection to the database
+    /// </summary>
     public class NorthWindContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=localhost; Database=FTrade; trusted_connection=true");
         }
-
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }

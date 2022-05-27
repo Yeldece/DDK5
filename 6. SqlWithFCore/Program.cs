@@ -76,9 +76,11 @@ namespace SqlWithEFCore
             int Affected = NorthWind.SaveChanges();
 
             //Delete a Supplier
-            var thiefToDelete = NorthWind.Suppliers.FirstOrDefault(x => x.CompanyName.ToLower() == "thief");
-            NorthWind.Suppliers.Remove(thiefToDelete);
-
+            var thiefToDelete = NorthWind.Suppliers.FirstOrDefault(x => x.CompanyName.ToLower().Contains("thief"));
+            if (thiefToDelete != null)
+            {
+                NorthWind.Suppliers.Remove(thiefToDelete);
+            }
 
         }
     }

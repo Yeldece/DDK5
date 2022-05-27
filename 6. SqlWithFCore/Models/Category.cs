@@ -14,5 +14,12 @@ namespace SqlWithEFCore.Models
         public string? Description { get; set; }
         [Column(Order = 3, TypeName = "image")]
         public string? Picture { get; set; }
+
+        public virtual ICollection<Product> Products { get; set; }
+
+        public Category()
+        {
+            Products = new HashSet<Product>();
+        }
     }
 }
