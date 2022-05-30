@@ -10,29 +10,33 @@
 </head>
 
 <body>
-    div id="kapsayici">        
-    <div id="bitis"></div>         <img id="atbir" src="atresmi.png">        
-    <hr />         <img id="atiki" src="Atresmi2.png">        
-    <hr />         <img id="atuc" src="Atresmi3.png">        
-    <hr />    
+    <div id="kapsayici">        
+        <div id="bitis"></div>         <img id="atbir" src="atresmi.jpg">        
+        <hr />         <img id="atiki" src="atresmi.jpg">        
+        <hr />         <img id="atuc" src="atresmi.jpg">        
+        <hr />    
     </div>     <br><br>      <button id="deneme" onclick="start()"> Yarışı Başlat </button>    
 
 </body>
 
 <script>
     const finish = 1500;
-    const horse1 = getElementById("atbir");
+    const horse1 = document.getElementById("atbir");
     const horse2 = document.getElementById("atiki");
     const horse3 = document.getElementById("atuc");
     function start() {
-        setInterval(race, 1000);
+        var period = setInterval(race, 1000, period);
     }
-    function race() {
+    function race(period) {
         let num1 = getRandInt(1, 99);
         let num2 = getRandInt(1, 99);
         let num3 = getRandInt(1, 99);
-horse1.style.left+=num1;
-
+        horse1.style.left += num1;
+        horse2.style.left += num2;
+        horse3.style.left += num3;
+        if (horse1.style.left > 1500 || horse2.style.left > finish || horse3.style.left > finish) {
+            period.clearInterval();
+        }
     }
     function getRandInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
