@@ -1,0 +1,31 @@
+div#kapsayici {
+    margin-right: 75px;
+    margin-top: 25px;
+    background-color: gray;
+}
+
+​​ img {
+    position: relative;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    transition: all 2s;
+}
+
+​​ div#bitis {
+    width: 10px;
+    height: 350px;
+    /* ralative posizyonu esnek yaptım rahat hareket ettirebileyim.  */
+    position: relative;
+    float: right;
+    background-color: tomato;
+    left: 1500px;
+}
+
+​​ button {
+    cursor: pointer;
+    float: right;
+    width: 100px;
+    height: 75px;
+    font-size: 20px;
+}

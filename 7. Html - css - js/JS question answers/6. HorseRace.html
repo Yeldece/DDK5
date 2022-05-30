@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="HorseRace.css">
+</head>
+
+<body>
+    div id="kapsayici">        
+    <div id="bitis"></div>         <img id="atbir" src="atresmi.png">        
+    <hr />         <img id="atiki" src="Atresmi2.png">        
+    <hr />         <img id="atuc" src="Atresmi3.png">        
+    <hr />    
+    </div>     <br><br>      <button id="deneme" onclick="start()"> Yarışı Başlat </button>    
+
+</body>
+
+<script>
+    const finish = 1500;
+    const horse1 = getElementById("atbir");
+    const horse2 = document.getElementById("atiki");
+    const horse3 = document.getElementById("atuc");
+    function start() {
+        setInterval(race, 1000);
+    }
+    function race() {
+        let num1 = getRandInt(1, 99);
+        let num2 = getRandInt(1, 99);
+        let num3 = getRandInt(1, 99);
+horse1.style.left+=num1;
+
+    }
+    function getRandInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+</script>
+
+</html>

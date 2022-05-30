@@ -16,12 +16,12 @@ namespace SqlWithEFCore
     }
     public class ConsoleLogger : ILogger
     {
-        // if your logger uses unmanaged resources, you can
-        // return the class that implements IDisposable here 
+
         public IDisposable BeginScope<TState>(TState state)
         {
             return null;
         }
+
         public bool IsEnabled(LogLevel logLevel)
         {
             switch (logLevel)
@@ -38,6 +38,7 @@ namespace SqlWithEFCore
                     return true;
             };
         }
+
         public void Log<TState>(LogLevel logLevel,
   EventId eventId, TState state, Exception exception,
   Func<TState, Exception, string> formatter)
