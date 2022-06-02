@@ -1,0 +1,37 @@
+<!-- Put a button and an input. When user clicks the button, move button right in the amount of input-->
+<!--  Ekrana bir input bir buton koy. Butona her tıkladığında BUTON 
+inputtaki değer kadar sağa kaysın.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #btn {
+        position: relative;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <script>
+    $(function () {
+      $("#btn").click(moveButtonByNumber);
+    });
+    function moveButtonByNumber() {
+      let num = Number($("#input1").val());
+      if (!num) {
+        return;
+      }
+      $("#btn").css("left", `${num}px`);
+    }
+  </script>
+  <body>
+    <div id="content">
+      <label id="labelInput1" for="input1">Number</label>
+      <input id="input1" />
+      <button id="btn">Click me to move</button>
+    </div>
+  </body>
+</html>

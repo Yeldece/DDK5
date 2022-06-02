@@ -1,0 +1,40 @@
+<!--Create three input and a button. When clicked to the button, print average of the input three number to console-->
+<!--Ekrana üç input bir buton koy. Butona tıkladığında inputta 
+bulunan sayıların ortalamasını console a yazsın.-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#btn").click(getNumbersAverage);
+      });
+
+      function getNumbersAverage() {
+        let num1 = Number($("#input1").val());
+        let num2 = Number($("#input2").val());
+        let num3 = Number($("#input3").val());
+        if (!num1 || !num2 || !num3) {
+          return;
+        }
+        console.log((num1 + num2 + num3) / 3);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      <label id="labelInput1" for="input1">First number</label>
+      <label id="labelInput2" for="input2">Second number</label>
+      <label id="labelInput3" for="input3">Third number</label>
+      <input id="input1" />
+      <input id="input2" />
+      <input id="input3" />
+      <button id="btn" type="button">Get average</button>
+    </div>
+  </body>
+</html>

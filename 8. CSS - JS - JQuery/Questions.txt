@@ -1,0 +1,20 @@
+1) Ekrana bir input bir buton koy. Inputtan aldığın verinin karesini 
+console a yazdır.
+2) Ekrana üç input bir buton koy. Butona tıkladığında inputta 
+bulunan sayıların ortalamasını console a yazsın.
+3) Ekrana bir input bir buton koy. Butona her tıkladığında BUTON 
+inputtaki değer kadar sağa kaysın.
+4) Ekrana 3 buton koy. Butonlara herhangi bir ID veya class 
+VERME. Hangi butona tıklanırsa o yok olsun. ( EMRE ÇÖZDÜ! )
+5) Ekrana bir input bir img ve bir buton koy. Butona tıkladığında 
+inputtaki değeri img in source attribute a atasın. Örneğin 
+inputta https://cloudfour.com/examples/imgcurrentsrc/images/kitten-small.png https://cloudfour.com/examples/imgcurrentsrc/images/kitten-small.png girip entera bastığında 
+resmi source olarak atayıp ekranda gösterecek.
+6) Ekrana bir input bir buton koy. Butona tıkladığında inputtaki 
+değeri butonun textinde göstersin.
+7) Ekrana bir input ve bir buton koy. Butona her tıkladığında 
+ekrana h1 eklesin ve h1 in içeriğini inputtan alsın.
+8) Ekrana bir input ve bir buton koy. Butona tıkladığında inputtaki
+sayı kadar buton oluşturup yanyana ekle
+9)
+ 

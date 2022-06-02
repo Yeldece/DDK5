@@ -1,0 +1,39 @@
+<!--Create three button without an ID or class, when clicked one of the buttons, hide the spesific button-->
+<!-- Ekrana 3 buton koy. Butonlara herhangi bir ID veya class 
+VERME. Hangi butona tıklanırsa o yok olsun. ( EMRE ÇÖZDÜ! )
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      ul {
+        list-style-type: none;
+      }
+      ul li {
+        margin-bottom: 200px;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("button").click(hideThis);
+      });
+      function hideThis() {
+        $(this).hide();
+      }
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      <ul id="buttonList">
+        <li><button>Click to hide me</button></li>
+        <li><button>Click to hide me</button></li>
+        <li><button>Click to hide me</button></li>
+      </ul>
+    </div>
+  </body>
+</html>

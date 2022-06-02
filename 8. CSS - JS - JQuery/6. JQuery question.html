@@ -1,0 +1,29 @@
+<!--Create an input and a button. When clicked the button, make an img with input as src-->
+<!--Ekrana bir input bir img ve bir buton koy. Butona tıkladığında 
+inputtaki değeri img in source attribute a atasın.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#btn").click(createImageFromInput);
+      });
+      function createImageFromInput() {
+        let img = $("<img/>").attr("src", $("#input1").val());
+        $("body").append(img);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      <label id="labelInput1" for="input1">Path for the image</label>
+      <input id="input1" type="text" />
+      <button id="btn" type="button">get image</button>
+    </div>
+  </body>
+</html>

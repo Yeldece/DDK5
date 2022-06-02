@@ -1,0 +1,27 @@
+<!--Create a button with an input, when you click the button, button's text should be changed with input's value-->
+<!-- Ekrana bir input bir buton koy. Butona tıkladığında inputtaki 
+değeri butonun textinde göstersin.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#btn").click(() => {
+          $(this).html($("#input1").val());
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      <label>button text</label>
+      <input id="input1" />
+      <button id="btn">text will change based on input</button>
+    </div>
+  </body>
+</html>
