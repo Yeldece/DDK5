@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        ul{
+          list-style-type: none;  
+        }
+        #context{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#plus").click(() =>
+          getNumbers() ? plus(...getNumbers()) : inputError()
+        );
+        $("#minus").click(() =>
+          getNumbers() ? minus(...getNumbers()) : inputError()
+        );
+        $("#multiply").click(() =>
+          getNumbers() ? multiply(...getNumbers()) : inputError()
+        );
+        $("#divide").click(() =>
+          getNumbers() ? divide(...getNumbers()) : inputError()
+        );
+      });
+      function inputError() {
+        $("#result h1").html("girdiler sayi olmali");
+      }
+      function getNumbers() {
+        let num1 = Number($("#input1").val());
+        let num2 = Number($("#input2").val());
+        if (!num1 || !num2) {
+          return;
+        }
+        return [ num1, num2 ];
+      }
+      function printResult(result) {
+        $("#result h1").html(result);
+      }
+      function plus(input1, input2) {
+        printResult(input1 + input2);
+      }
+      function minus(input1, input2) {
+        printResult(input1 - input2);
+      }
+      function multiply(input1, input2) {
+        printResult(input1 * input2);
+      }
+
+      function divide(input1, input2) {
+        printResult(input1 / input2);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      <label id="labelInput1" for="input1">First number</label>
+      <input id="input1" />
+      <label id="labelInput2" for="input2">Second number</label>
+      <input id="input2" />
+    </div>
+    <div id="buttons">
+      <ul>
+        <li><button id="plus">+</button></li>
+        <li><button id="minus">-</button></li>
+        <li>
+          <button id="multiply">*</button>
+        </li>
+        <li>
+          <button id="divide">/</button>
+        </li>
+      </ul>
+    </div>
+    <div id="result">
+      <h1></h1>
+    </div>
+  </body>
+</html>

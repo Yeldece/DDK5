@@ -2,6 +2,24 @@
     "folders": [
         {
             "path": "."
+        },
+        {
+            "path": "..\\2. Datetime - Lists"
+        },
+        {
+            "path": "..\\FridayQuestions"
+        },
+        {
+            "path": "..\\3. OOP"
+        },
+        {
+            "path": "..\\4. OOP part 2"
+        },
+        {
+            "path": "..\\5. MSSql"
+        },
+        {
+            "path": "..\\6. SqlWithFCore"
         }
     ]
 }
