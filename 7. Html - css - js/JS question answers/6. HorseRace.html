@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="HorseRace.css">
+</head>
+
+<body>
+    <div id="kapsayici">        
+        <div id="bitis"></div>         <img id="atbir" src="atresmi.jpg">        
+        <hr />         <img id="atiki" src="atresmi.jpg">        
+        <hr />         <img id="atuc" src="atresmi.jpg">        
+        <hr />    
+    </div>     <br><br>      <button id="deneme" onclick="start()"> Yarışı Başlat </button>    
+
+</body>
+
+<script>
+    const finish = 1500;
+    const horse1 = document.getElementById("atbir");
+    const horse2 = document.getElementById("atiki");
+    const horse3 = document.getElementById("atuc");
+    var num1 = 5;
+    var num2 = 5;
+    var num3 = 5;
+
+    function start() {
+        var period = setInterval(race, 1000, period);
+    }
+    function race(period) {
+        num1 += getRandInt(1, 101);
+        num2 += getRandInt(1, 101);
+        num3 += getRandInt(1, 101);
+
+        horse1.style.left = `${num1}px`;
+        horse2.style.left = `$[num2}px`;
+        horse3.style.left = `${num3}px`;
+        if (horse1.style.left > 1500 || horse2.style.left > finish || horse3.style.left > finish) {
+            period.clearInterval();
+        }
+    }
+    function getRandInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+</script>
+
+</html>
