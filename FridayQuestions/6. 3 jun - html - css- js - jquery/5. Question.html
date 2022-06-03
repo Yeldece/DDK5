@@ -1,0 +1,32 @@
+<!--Ekrana içerisinde 5 adet li elemanı olan bir ul koy. Daha sonra bir input ve bir buton koy. Butona her tıkladığında inputtan aldığı veriyi yeni bir li elementi olarak eklesin-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+$(function(){
+$("#btn").click(function(){
+    $("#ul1").append($(`<li>${$("#input1").val()}</li>`));
+});
+});
+    </script>
+</head>
+
+<body>
+    <ul id="ul1">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <input id="input1"/>
+    <button id="btn">click</button>
+</body>
+
+</html>
