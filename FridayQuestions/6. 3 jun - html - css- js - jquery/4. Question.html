@@ -1,4 +1,6 @@
-<!--Create select with 10 options when ever option changes, h1 should change regardingly-->
+<!--Create select with 10 options when ever option changes, h1 should change regarding selected value-->
+<!--Yukarıdaki örnekte optionlara value ver. Ve her select değiştiğinde bu sefer h1 içerisine value 
+yazsın-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,9 +16,9 @@
                 $("#select1").append($(`<option value="val${i}">val${10+i}</option>`));
             }
         });
-        $(function () {
-            $("#select1").change(function () {
-                $("#head1").html($("#select1").children("option").filter(":selected").text());
+        $(function(){
+            $("#select1").change(function(){
+                $("#head1").html($("#select1").val());
             });
         });
     </script>
