@@ -1,4 +1,4 @@
-<!--Createa a button with an input, every click of the button should add a h1 to document with the text which input has-->
+<!--Create a button with an input, every click of the button should add a h1 to document with the text which input has-->
 <!-- 7) Ekrana bir input ve bir buton koy. Butona her tıkladığında 
 ekrana h1 eklesin ve h1 in içeriğini inputtan alsın.-->
 <!DOCTYPE html>
@@ -10,11 +10,16 @@ ekrana h1 eklesin ve h1 in içeriğini inputtan alsın.-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+    <script>
+        $(function () {
+            $("#btn").click(() => $("body").append($(`<h1>${$("#input1").val()}</h1>`)));
+        });
+    </script>
 </head>
 
 <body>
-
+    <input id="input1" />
+    <button id="btn">click me to add h1</button>
 </body>
 
 </html>
