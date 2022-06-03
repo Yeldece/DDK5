@@ -1,0 +1,40 @@
+<!-- https://northwind.vercel.app/api/products ları çek ve bir tabloya yazdır.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            fillTable();
+        });
+        function fillTable() {
+            $.getJSON("https://northwind.vercel.app/api/products", function (data) {
+                data.forEach(element => {
+                    if(element.unitPrice>20){
+                    $("#table1").append(`<tr><td>${element.id}</td><td>${element.name}</td><td>${element.unitPrice}</td><td>${element.unitsInStock}</td><td>${element.discontinued}</td></tr>`)
+                    }
+                });
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <table id="table1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Unit Price</th>
+            <th>Units In Stock</th>
+            <th>Discontinued</th>
+
+        </tr>
+    </table>
+</body>
+
+</html>
