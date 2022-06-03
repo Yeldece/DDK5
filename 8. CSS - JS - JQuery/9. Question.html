@@ -1,0 +1,32 @@
+<!--Ekrana bir input ve bir buton koy. Butona tıkladığında inputtaki
+sayı kadar buton oluşturup yanyana ekle-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                let num = Number($("#input1").val());
+
+                if (num) {
+                    for (let i = 0; i < num; i++) {
+                        $("body").append($(`<button></button>`));
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input id="input1" />
+    <button id="btn">click here to add button</button>
+</body>
+
+</html>
