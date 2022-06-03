@@ -1,0 +1,34 @@
+<!--Create select with 10 options when ever option changes, h1 should change regardingly-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            for (let i = 0; i <= 9; i++) {
+                $("#select1").append($(`<option value="val${i}">val${i}</option>`));
+            }
+        });
+        $(function(){
+            $("#select1").change(function(){
+                $("#head1").html($("#select1").val());
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="content">
+        <label for="select1" id="label1">select something</label>
+        <select id="select1" name="selectList">
+        </select>
+        <h1 id="head1"></h1>
+    </div>
+</body>
+
+</html>

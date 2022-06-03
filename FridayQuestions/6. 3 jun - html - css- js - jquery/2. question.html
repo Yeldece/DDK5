@@ -1,0 +1,29 @@
+<!--Create an input with a h1, when ever input changes, h1 should follow it's value-->
+<!--Ekrana bir adet input ve bir adet h1 oy. Inputa bir şeyler yazarken, yazdıklarım aynı anda h1 
+de gözüksün ( input onchange get value olarak aratabilirsin.)-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#input1").on("input", function () {
+                $("#head1").html($("#input1").val());
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="content">
+        <input id="input1" type="text" />
+        <h1 id="head1"></h1>
+    </div>
+</body>
+
+</html>

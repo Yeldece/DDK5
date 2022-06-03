@@ -40,8 +40,8 @@
         horse2.style.left = `$[num2}px`;
         horse3.style.left = `${num3}px`;
         if (horse1.style.left > 1500 || horse2.style.left > finish || horse3.style.left > finish) {
-            period.clearInterval();
         }
+        clearInterval(period);
     }
     function getRandInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);

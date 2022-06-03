@@ -1,0 +1,14 @@
+1) Ekrana 5 tane buton koy. Herhangi bir butona bastığında tüm butonlar her bastığımızda 10 
+px sağa kaysın.
+2) Ekrana bir adet input ve bir adet h1 oy. Inputa bir şeyler yazarken, yazdıklarım aynı anda h1 
+de gözüksün ( input onchange get value olarak aratabilirsin. )
+3) Ekrana bir adet select koy ve içerisine 10 adet option ekle ( 
+https://www.w3schools.com/tags/tag_select.asphttps://www.w3schools.com/tags/tag_select.asp ) Daha sonra ekrana bir adet h1 koy. Her 
+option değiştiğinde yeni option içerisinde yazan text h1 e yazsın.
+4) Yukarıdaki örnekte optionlara value ver. Ve her select değiştiğinde bu sefer h1 içerisine value 
+yazsın.
+5) Ekrana içerisinde 5 adet li elemanı olan bir ul koy. Daha sonra bir input ve bir buton koy. 
+Butona her tıkladığında inputtan aldığı veriyi yeni bir li elementi olarak eklesin. 
+6) https://northwind.vercel.app/api/productshttps://northwind.vercel.app/api/products ları çek ve bir tabloya yazdır.
+7) Çektiğin ürün adedini tablonun tepesine bir h1 koy ve içine yazdır.
+8) Ürünleri çek sadece fiyatı 20 den büyük olanları table a yazdır.

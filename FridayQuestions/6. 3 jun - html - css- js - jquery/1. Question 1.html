@@ -1,0 +1,41 @@
+<!--Create five button. Clicking to any button should move all the buttons 10px right-->
+<!--Ekrana 5 tane buton koy. Herhangi bir butona bastığında tüm butonlar her bastığımızda 10 
+px sağa kaysın.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        *{
+            margin-left: 0;
+        }
+    </style>
+    <script>
+        var position=0;
+        $(function(){
+$("button").click(function(){
+    $("button").css("margin-left",`${position+=10}px`);
+});
+        });
+    </script>
+</head>
+
+<body>
+    <div id="content">
+        <ul>
+            <li><button>click me to move all</button></li>
+            <li><button>click me to move all</button></li>
+            <li><button>click me to move all</button></li>
+            <li><button>click me to move all</button></li>
+            <li><button>click me to move all</button></li>
+
+        </ul>
+    </div>
+</body>
+
+</html>
