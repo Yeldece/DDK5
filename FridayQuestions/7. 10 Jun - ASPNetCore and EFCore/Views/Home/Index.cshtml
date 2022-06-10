@@ -1,0 +1,30 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using MyWebApp.Models;
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th> Name </th>
+        <th> Price</th>
+        <th> Stock </th>
+        <th>Discontinued</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td> <a href="/home/detail/@item.ProductId"> @item.ProductId </td>
+            <td> <a href="/home/detail/@item.ProductId"> @item.ProductName </td>
+            <td> <a href="/home/detail/@item.ProductId"> @item.Cost </td>
+            <td> <a href="/home/detail/@item.ProductId"> @item.Stock </td>
+            <td><a href="/home/detail/@item.ProductId">@item.Discontinued</a></td>
+        </tr>
+
+
+    }
+</table>
