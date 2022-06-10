@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#btn").click(function () {
+          let product = {
+            name: $("#name").val(),
+            unitPrice: $("#unitPrice").val(),
+          };
+          $.ajax({
+            url: "https://northwind.vercel.app/api/products",
+            type: "POST",
+            data: product,
+            success: (data) => {
+              console.log("New product", data);
+            },
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <label for="name">name</label>
+    <input id="name" />
+    <label for="unitPrice">name</label>
+    <input id="unitPrice" />
+
+    <button id="btn">click to post</button>
+  </body>
+</html>
