@@ -1,0 +1,24 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model MyWebApp.Models.Order
+
+<form action="/Order/Add" method="post">
+    <div>
+        @Html.LabelFor(x => x.OrderDate)
+        @Html.EditorFor(x => x.OrderDate)
+    </div>
+    <div>
+        @Html.LabelFor(x => x.RequiredDate)
+        @Html.EditorFor(x => x.RequiredDate)
+    </div>
+    <div>
+        @Html.LabelFor(x => x.CompanyName)
+        @Html.TextBoxFor(x => x.CompanyName)
+    </div>
+    <div>
+        @Html.LabelFor(x => x.Address)
+        @Html.TextAreaFor(x => x.Address)
+    </div>
+    <button type="submit">submit</button>
+</form>

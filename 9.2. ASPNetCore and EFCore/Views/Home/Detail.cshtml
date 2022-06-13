@@ -1,0 +1,17 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <ul>
+        <li>@Model.ProductId</li>
+        <li>@Model.ProductName</li>
+        <li>@Model.Cost</li>
+        <li>@Model.Stock</li>
+        <li>@Model.Category.CategoryId</li>
+        <li>@Model.Category.CategoryName</li>
+        <li>@Model.Category.Description</li>
+
+    </ul>
+</div>
+
+<a href="/home/update/@Model.ProductId">Modify</a>

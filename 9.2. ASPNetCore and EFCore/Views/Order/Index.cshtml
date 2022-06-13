@@ -1,0 +1,28 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using MyWebApp.Models;
+@if (Model is Array)
+{
+    <table>
+        <tr>
+            <th>OrderDate</th>
+            <th>RequiredDate</th>
+            <th>CompanyName</th>
+            <th>Address</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.OrderDate</td>
+                <td>@item.RequiredDate</td>
+                <td>@item.CompanyName</td>
+                <td>@item.Address</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <h1>Sonuc yok</h1>
+}
